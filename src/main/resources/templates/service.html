@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Service Page</title>
+</head>
+<body>
+       
+       <footer id="hostID" th:replace="~{footer::foot1(${title},${subtitle})}"></footer> 
+       
+</body>
+</html>
+
+
+
+<!-- th:replace is used for replace the host footer to the fragment footer
+     th:include It is used for only fragment footer body in our host footer
+     th:insert   It is used to insert whole body of fragment with footer tag in our host footer -->

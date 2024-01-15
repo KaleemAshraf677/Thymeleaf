@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Example of Loop</title>
+</head>
+<body>
+       <h2>Now I am going to traverse elements in collection using loop.....</h2>
+       <h4 th:text="${name}"></h4>
+       
+       <ul>
+		   <li th:each="n,status : ${name}">
+			   <span th:text=" ${status.index+1}+' '+${n} " ></span> 
+		   </li>   
+	   </ul>
+</body>
+</html>
+
+
+<!--         status= have following methods
+	index: the current iteration index, starting with 0.
+	count: the number of elements processed till now in the list.
+	size:  the total number of elements in the list.
+	even/odd: check if the current iteration index is even or odd.
+	first:  checks if the current iteration is first one.
+	last: check if th current iteration is last one.
+ -->
